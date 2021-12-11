@@ -1,0 +1,56 @@
+.mainBanner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 8px;
+}
+
+.subBanner{
+    background-color:whitesmoke;
+    padding: 1em;
+}
+
+.subBanner nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.visible{
+    visibility: visible;
+    position: relative;
+}
+
+.invisible{
+    visibility: hidden;
+    position: absolute;
+}
+
+/* Hamburger animations */
+
+.hamburger {
+    transition: all 0.3s;
+}
+  
+.hamburger rect{
+    width: 100px;
+    height: 20px;
+    rx: 8;
+    transition: all 0.3s;
+}
+
+.hamburger rect:nth-child(1){y:0;}
+.hamburger rect:nth-child(2){y:30;}
+.hamburger rect:nth-child(3){y:60;}
+  
+.hamburger.is-active {
+    transition: all 0.3s;
+}
+
+.ham-eleven.is-active rect:nth-child(1) {width: 30%;}
+.ham-eleven.is-active rect:nth-child(2) {width: 60%;}
+.ham-eleven.is-active rect:nth-child(3) {width: 90%;}
+.ham-eleven.is-active {transform: rotate(-90deg);}
