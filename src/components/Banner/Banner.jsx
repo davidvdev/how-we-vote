@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import Nav from '../Nav'
 import './Banner.css'
 
 const Banner = () => {
@@ -8,7 +10,9 @@ const Banner = () => {
     return(
         <header className="Banner">
             <div className="mainBanner">
-                <h1 className="logo">How We Vote</h1>
+                <Link to="/">
+                    <h1 className="logo">How We Vote</h1>
+                </Link>
                 <div 
                     role="button"
                     className={ navDrawer?
@@ -29,12 +33,7 @@ const Banner = () => {
                 "subBanner visible" : 
                 "subBanner invisible"}>
                 <nav>
-                    <ul>
-                        <li><a href="#">ITEM</a></li>
-                        <li><a href="#">ITEM</a></li>
-                        <li><a href="#">ITEM</a></li>
-                        <li><a href="#">ITEM</a></li>
-                    </ul>
+                    <Nav className="nav"/>
                 </nav>
             </div>
         </header>
