@@ -8,6 +8,7 @@ import './App.css'
 import Banner from './components/Banner/Banner'
 import Blurb from './components/Blurb/Blurb'
 import Footer from './components/Footer/Footer'
+import System from './components/System/System'
 
 function App() {
 
@@ -24,24 +25,24 @@ function App() {
             }/>
 
           <Route path="/plurality" element={
-            <div>
-              Plurality
-            </div>
+            <System 
+              sysName="Plurality"
+            />
           }/>
           <Route path="/majoritarian" element={
-            <div>
-              Majoritarian
-            </div>
+            <System 
+              sysName="Majoritarian"
+            />
           }/>
           <Route path="/proportional" element={
-            <div>
-              Proportional
-            </div>
+            <System 
+              sysName="Proportional"
+            />
           }/>
           <Route path="/mixed" element={
-            <div>
-              Mixed
-            </div>
+            <System 
+              sysName="Mixed"
+            />
           }/>
 
         </Routes>
