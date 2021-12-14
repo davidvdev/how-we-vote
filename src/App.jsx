@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
 
 // import components
-import Banner from './components/Banner'
+import Banner from './components/Banner/Banner'
+import Blurb from './components/Blurb/Blurb'
+import Footer from './components/Footer/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
       <Banner />
-      
+      <Blurb />
+      <Footer />
     </div>
   )
 }

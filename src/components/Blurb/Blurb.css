@@ -1,0 +1,16 @@
+.Blurb{
+    text-align: center;
+    background-color: whitesmoke;
+  }
+
+.voting-systems{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+.voting-systems li{
+    padding: 2em 0;
+    width: 45%;
+}
