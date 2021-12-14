@@ -1,6 +1,8 @@
 .Blurb{
     text-align: center;
     background-color: whitesmoke;
+    margin: 0 16px;
+    border-radius: 3px;
   }
 
 .voting-systems{
@@ -8,9 +10,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
   }
 
 .voting-systems li{
     padding: 2em 0;
-    width: 45%;
+}
+
+.voting-systems a {
+    padding: 0;
+    margin: 0;
+    width: 40%;
 }
