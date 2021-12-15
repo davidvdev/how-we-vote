@@ -6,11 +6,11 @@ import './Blurb.css'
 
 const Blurb = () => {
     return(
-        <div className="Blurb">
+        <main className="Blurb">
             <h1>Everyone Has a Voice</h1>
             <h2>Learn how people around the world vote</h2>
             <Nav className="voting-systems"/>
-        </div>
+        </main>
     )
 }
 

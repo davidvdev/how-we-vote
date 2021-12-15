@@ -21,3 +21,11 @@ a {
 a:hover {
     color: var(--cardinal);
 }
+
+main {
+    text-align: center;
+    background-color: var(--cultured);
+    margin: 0 16px;
+    border-radius: 3px;
+    padding: 1.5em;
+}

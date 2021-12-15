@@ -1,3 +1,13 @@
+:root {
+    --cardinal: #c8293eff;
+    --cultured: #f2f2f2ff;
+    --glaucous: #6377c7ff;
+    --moss-green: #899d6aff;
+    --marigold: #e0a227ff;
+}
+
 main {
     text-align: center;
+    background-color: var(--cultured);
+
 }
