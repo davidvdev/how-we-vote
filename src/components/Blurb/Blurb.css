@@ -1,6 +1,14 @@
+:root {
+  --cardinal: #c8293eff;
+  --cultured: #f2f2f2ff;
+  --glaucous: #6377c7ff;
+  --moss-green: #899d6aff;
+  --marigold: #e0a227ff;
+}
+
 .Blurb{
     text-align: center;
-    background-color: whitesmoke;
+    background-color: var(--cultured);
     margin: 0 16px;
     border-radius: 3px;
   }

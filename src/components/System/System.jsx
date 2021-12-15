@@ -2,6 +2,9 @@ import './System.css'
 import Ballot from '../Ballot/Ballot'
 
 const System = ({sysName}) => {
+
+    
+
     return(
         <main>
             <h2>{sysName}</h2>

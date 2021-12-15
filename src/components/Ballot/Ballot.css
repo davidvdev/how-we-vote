@@ -1,0 +1,9 @@
+
+.Ballot ul {
+    margin: 0;
+    padding: 0;
+}
+
+.Ballot li {
+    list-style-type: none;
+}

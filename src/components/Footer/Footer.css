@@ -1,5 +1,14 @@
+:root {
+    --cardinal: #c8293eff;
+    --cultured: #f2f2f2ff;
+    --glaucous: #6377c7ff;
+    --moss-green: #899d6aff;
+    --marigold: #e0a227ff;
+}
+
 .Footer{
+    margin-top: 1em;
+    padding-top: 1em;
     text-align: center;
-    /* display: flex;
-    justify-content: space-evenly; */
+    background-color: var(--cultured);
 }

@@ -1,15 +1,23 @@
+:root {
+    --cardinal: #c8293eff;
+    --cultured: #f2f2f2ff;
+    --glaucous: #6377c7ff;
+    --moss-green: #899d6aff;
+    --marigold: #e0a227ff;
+}
+
 .mainBanner{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em 8px;
     position: relative;
-    background-color: white;
+    background-color: var(--cultured);
     z-index: 2;
 }
 
 .subBanner{
-    background-color:whitesmoke;
+    background-color:var(--marigold);
     padding: 1em;
     position: relative;
     z-index: 1;
@@ -32,7 +40,7 @@
 
 .invisible{
     position: relative;
-    top:-40%;
+    top:-30%;
 }
 
 /* Hamburger animations */
@@ -59,4 +67,4 @@
 .ham-eleven.is-active rect:nth-child(1) {width: 30%;}
 .ham-eleven.is-active rect:nth-child(2) {width: 60%;}
 .ham-eleven.is-active rect:nth-child(3) {width: 90%;}
-.ham-eleven.is-active {transform: rotate(-90deg);}
+.ham-eleven.is-active {transform: rotate(-90deg); fill: var(--glaucous);}
