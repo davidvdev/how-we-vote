@@ -7,6 +7,10 @@ const Banner = () => {
 
     const [navDrawer, setNavDrawer] = useState(false)
 
+    const toggleDrawer = () => {
+        setNavDrawer(!navDrawer)
+    }
+
     return(
         <header className="Banner">
             <div className="mainBanner">
@@ -19,7 +23,7 @@ const Banner = () => {
                     "hamburger ham-eleven" :
                     "hamburger ham-eleven is-active"
                     }
-                    onClick={() => setNavDrawer(!navDrawer)}
+                    onClick={() => toggleDrawer()}
                     >
                     <svg viewBox="0 0 100 80" width="40" height="40">
                         <rect></rect>
@@ -33,7 +37,7 @@ const Banner = () => {
                 "subBanner visible" : 
                 "subBanner invisible"}>
                 <nav>
-                    <Nav className="nav"/>
+                    <Nav className="nav" handleClick={toggleDrawer}/>
                 </nav>
             </div>
         </header>
