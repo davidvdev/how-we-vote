@@ -34,10 +34,12 @@ const Ballot = () => {
 
     const [vote, setVote] = useState(null)
     const [showResults, setShowResults] = useState(false)
+    const [submissionCount, setSubmissionCount] = useState(0)
 
 
     const handleSubmit = (event) => {
         event.preventDefault()
+        setSubmissionCount(2)
         options.find(op => op.abbr == vote.abbr).votes++
         setOptions([...options])
         setShowResults(true)
@@ -45,7 +47,7 @@ const Ballot = () => {
     }
 
     const handleChange = (event) => {
-        console.log(event.target.value)
+        submissionCount < 1 ? setSubmissionCount(1) : setSubmissionCount(submissionCount) 
         setVote({
             abbr: event.target.id,
             name: event.target.value,
@@ -71,7 +73,18 @@ const Ballot = () => {
                 )
             })}
                 </ul>
-                <input type="submit" value="Submit my Ballot!"/>
+                { submissionCount == 1 &&
+                    <input type="submit" value="Submit my Ballot!" />
+
+                }
+                { submissionCount > 1 &&
+                    <input type="submit" value="Vote Cast!" disabled/>
+
+                }
+                { submissionCount < 1 &&
+                    <input type="submit" value="Select an Option" disabled/>
+
+                }
             </form>
             { showResults &&
             <VictoryChart domainPadding={20}>
