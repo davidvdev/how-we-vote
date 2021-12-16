@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 // import stylesheets
 import './App.css'
 
+// import json data
+import systems from './data/systems.json'
+
 // import components
 import Banner from './components/Banner/Banner'
 import Blurb from './components/Blurb/Blurb'
@@ -15,7 +18,7 @@ function App() {
   return (
     <Router>
         <div className="App">
-        <Banner />
+        <Banner systems={systems} />
         <Routes>
 
           <Route exact path="/" element={
@@ -23,8 +26,18 @@ function App() {
               <Blurb />
             </>
             }/>
-
-          <Route path="/plurality" element={
+          {
+            systems.map(system => {
+              return(
+                <Route path={"/"+ system.name} key={system.name} element={
+                  <System 
+                    sysName={system.name}
+                  />
+                }/>
+              )
+            })
+          }
+          {/* <Route path="/plurality" element={
             <System 
               sysName="Plurality"
             />
@@ -43,7 +56,7 @@ function App() {
             <System 
               sysName="Mixed"
             />
-          }/>
+          }/> */}
 
         </Routes>
         <Footer />

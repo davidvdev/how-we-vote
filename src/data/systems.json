@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Plurality",
+        "description": "Plurality voting is a system in which the candidate(s) with the highest number of votes wins, with no requirement to get a majority of votes. In cases where there is a single position to be filled, it is known as first-past-the-post.",
+        "countries": ""
+
+    },
+    {
+        "name": "Majoritarian",
+        "description": "Majoritarian voting is a system in which candidates must receive a majority of votes to be elected, either in a runoff election or final round of voting. /n There are two main forms of majoritarian systems, one conducted in a single election using ranked voting and the other using multiple elections, to successively narrow the field of candidates. Both are primarily used for single-member constituencies.",
+        "countries": ""
+    },
+    {
+        "name": "Proportional",
+        "description": "Proportional representation is the most widely used electoral system for national legislatures, with the parliaments of over eighty countries elected by various forms of the system.",
+        "countries": ""
+    },
+    {
+        "name": "Mixed",
+        "description": "In several countries, mixed systems are used to elect the legislature. These include parallel voting (also known as mixed-member majoritarian) and mixed-member proportional representation.",
+        "countries": ""
+    }
+]

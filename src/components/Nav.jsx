@@ -1,22 +1,25 @@
 import {Link} from 'react-router-dom'
 
 
-const Nav = ({className, handleClick}) => {
+const Nav = ({className, handleClick, systems}) => {
 
     return(
         <ul className={className}>
-            <Link to="/plurality" onClick={() => handleClick()}>
-                <li>Plurality Systems</li>
-            </Link>
-            <Link to="/majoritarian" onClick={() => handleClick()}>
-                <li>Majoritarian Systems</li>
-            </Link>
-            <Link to="/proportional" onClick={() => handleClick()}>
-                <li>Proportional Systems</li>
-            </Link>
-            <Link to="/mixed" onClick={() => handleClick()}>
-                <li>Mixed Systems</li>
-            </Link>
+            {
+                systems.map(system => {
+                    return(
+                        <Link 
+                            to={"/"+ system.name} 
+                            key={system.name}
+                            onClick={() => handleClick()}
+                        >
+                            <li>
+                                {system.name.charAt(0).toUpperCase() + system.name.slice(1)} Voting
+                            </li>
+                        </Link>
+                    )
+                })
+            }
         </ul>
     )
 }
