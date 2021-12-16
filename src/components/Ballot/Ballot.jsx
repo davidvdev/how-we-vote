@@ -4,21 +4,21 @@ import './Ballot.css'
 
 const Ballot = () => {
 
-    const options = [
+    const [options, setOptions] = useState([
         {
             abbr: 'op1',
             name: 'Option 1',
-            votes: 3
+            votes: 1
         },
         {
             abbr: 'op2',
             name: 'Option 2',
-            votes: 4
+            votes: 1
         },
         {
             abbr: 'op3',
             name: 'Option 3',
-            votes: 8 
+            votes: 1
         },
         {
             abbr: 'op4',
@@ -28,9 +28,9 @@ const Ballot = () => {
         {
             abbr: 'op5',
             name: 'Option 5',
-            votes: 2
+            votes: 1
         },
-    ]
+    ])
 
     const [vote, setVote] = useState(null)
     const [showResults, setShowResults] = useState(false)
@@ -38,8 +38,9 @@ const Ballot = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        setShowResults(true)
         options.find(op => op.abbr == vote.abbr).votes++
+        setOptions([...options])
+        setShowResults(true)
 
     }
 
@@ -47,7 +48,7 @@ const Ballot = () => {
         console.log(event.target.value)
         setVote({
             abbr: event.target.id,
-            name: event.target.value
+            name: event.target.value,
         })
     }
 
