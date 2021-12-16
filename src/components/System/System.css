@@ -9,5 +9,26 @@
 main {
     text-align: center;
     background-color: var(--cultured);
+}
 
+.countries {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+}
+
+.countries li {
+    padding: 0.25em;
+    margin: 2px;
+    border: 1px solid var(--moss-green);
+    border-radius: 3px;
+}
+
+.countries li:hover{
+    background-color: var(--moss-green);
+    color: var(--cultured);
+    font-weight: bold;
 }

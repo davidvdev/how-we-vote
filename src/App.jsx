@@ -31,7 +31,7 @@ function App() {
               return(
                 <Route path={"/"+ system.name} key={system.name} element={
                   <System 
-                    sysName={system.name}
+                    system={system}
                   />
                 }/>
               )

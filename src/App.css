@@ -29,3 +29,7 @@ main {
     border-radius: 3px;
     padding: 1.5em;
 }
+
+main p {
+    text-align: center;
+}

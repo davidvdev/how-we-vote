@@ -1,16 +1,14 @@
 import './System.css'
 import Ballot from '../Ballot/Ballot'
 
-const System = ({sysName}) => {
+const System = ({system}) => {
 
     return(
         <main>
-            <h2>{sysName}</h2>
-            <h3>What is {sysName} Voting?</h3>
-            {/* explanation of the system */}
+            <h2>{system.name}</h2>
+            <h3>What is {system.name} Voting?</h3>
+            <p>{system.description}</p>
 
-            <h3>What Countries use {sysName} Voting?</h3>
-            {/* what countries use it */}
 
             <h3>data vis</h3>
             {/* data vis of its popularity */}
@@ -18,7 +16,12 @@ const System = ({sysName}) => {
             {/* sample ballot component */}
             <Ballot />
             
-
+            <h3>What Countries use {system.name} Voting?</h3>
+            <ul className="countries">
+                {system.countries.map(country => <li>{country}</li>)}
+            </ul>
+            <h4>Want to Learn More?</h4>
+            <a href={system.wiki}>Get an overview from Wikipedia.</a>
             {/* related links to continued learning? */}
         </main>
     )
