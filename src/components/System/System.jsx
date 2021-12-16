@@ -3,8 +3,6 @@ import Ballot from '../Ballot/Ballot'
 
 const System = ({sysName}) => {
 
-    
-
     return(
         <main>
             <h2>{sysName}</h2>
@@ -19,6 +17,7 @@ const System = ({sysName}) => {
 
             {/* sample ballot component */}
             <Ballot />
+            
 
             {/* related links to continued learning? */}
         </main>
