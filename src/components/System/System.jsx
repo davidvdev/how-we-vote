@@ -18,7 +18,7 @@ const System = ({system}) => {
             
             <h3>What Countries use {system.name} Voting?</h3>
             <ul className="countries">
-                {system.countries.map(country => <li>{country}</li>)}
+                {system.countries.map((country, index) => <li key={index}>{country}</li>)}
             </ul>
             <h4>Want to Learn More?</h4>
             <a href={system.wiki}>Get an overview from Wikipedia.</a>

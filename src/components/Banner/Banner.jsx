@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Nav from '../Nav'
 import './Banner.css'
 
-const Banner = ({systems}) => {
+const Banner = () => {
 
     const [navDrawer, setNavDrawer] = useState(false)
 
@@ -37,7 +37,7 @@ const Banner = ({systems}) => {
                 "subBanner visible" : 
                 "subBanner invisible"}>
                 <nav>
-                    <Nav className="nav" systems={systems} handleClick={toggleDrawer}/>
+                    <Nav className="nav" handleClick={toggleDrawer}/>
                 </nav>
             </div>
         </header>

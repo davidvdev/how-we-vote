@@ -1,12 +1,15 @@
 import {Link} from 'react-router-dom'
+import systems from '../data/systems.json'
 
 
-const Nav = ({className, handleClick, systems}) => {
+const Nav = ({className, handleClick}) => {
+
+    console.log(systems)
 
     return(
         <ul className={className}>
             {
-                systems.map(system => {
+                systems.map((system) => {
                     return(
                         <Link 
                             to={"/"+ system.name} 
@@ -14,7 +17,7 @@ const Nav = ({className, handleClick, systems}) => {
                             onClick={() => handleClick()}
                         >
                             <li>
-                                {system.name.charAt(0).toUpperCase() + system.name.slice(1)} Voting
+                                {system.name} Voting
                             </li>
                         </Link>
                     )
