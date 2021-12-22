@@ -29,7 +29,7 @@
     padding: 0;
     display: flex;
     list-style-type: none;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-evenly;
 }
 
@@ -68,3 +68,15 @@
 .ham-eleven.is-active rect:nth-child(2) {width: 60%;}
 .ham-eleven.is-active rect:nth-child(3) {width: 90%;}
 .ham-eleven.is-active {transform: rotate(-90deg); fill: var(--glaucous);}
+
+@media screen and (min-width: 1024px){
+    .mainBanner{
+        padding: 1em 10%;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .mainBanner{
+        padding: 1em 20%;
+    }
+}
