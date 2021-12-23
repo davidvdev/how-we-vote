@@ -9,11 +9,6 @@ const System = ({system}) => {
             <h3>What is {system.name} Voting?</h3>
             <p>{system.description}</p>
 
-
-            <h3>data vis</h3>
-            {/* data vis of its popularity */}
-
-            {/* sample ballot component */}
             <Ballot />
             
             <h3>What Countries use {system.name} Voting?</h3>
