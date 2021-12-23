@@ -87,13 +87,15 @@ const Ballot = () => {
                 }
             </form>
             { showResults &&
-            <VictoryChart domainPadding={20}>
-                <VictoryBar
-                    data={options}
-                    x="name"
-                    y="votes"
-                />
-            </VictoryChart>
+            <div className="results">
+                <VictoryChart domainPadding={20} >
+                    <VictoryBar
+                        data={options}
+                        x="name"
+                        y="votes"
+                    />
+                </VictoryChart>
+            </div>
             }
         </div>
     )

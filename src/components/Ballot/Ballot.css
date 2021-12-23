@@ -7,3 +7,8 @@
 .Ballot li {
     list-style-type: none;
 }
+
+.results {
+    margin: 0 auto;
+    max-width: 66%;
+}
